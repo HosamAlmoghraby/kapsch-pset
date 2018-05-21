@@ -21,3 +21,10 @@ flask run
 * Create a page to allow user to upload more images.
 * Show images in a page.
 * Store the categorization for each image in the database.
+
+## Technologies Used:
+* HTML5
+* CSS3
+* Python
+* Flask
+* SQLlite3
