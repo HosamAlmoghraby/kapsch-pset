@@ -120,8 +120,8 @@ def categorize_image():
             with open("./static/image_name.jpg", "wb") as img:
                 img.write(base64.b64decode(image_binary))
 
-            rowData = {}  # this is a dict
-            listRowData = []  # this is list
+            rowData = {}  # This is a dict
+            listRowData = []  # This is a list
 
             currentRow = 0
             while currentRow <= count - 1:
@@ -144,10 +144,12 @@ def categorize_image():
     else:
         image_id = request.form['imgid']
         category = request.form.get('category')
+
+        # Update images's category in images table
         update = sqlite3.connect("kapsch.db")
-        sql = "UPDATE images SET category = ? WHERE id = ?"
+        sql_statement = "UPDATE images SET category = ? WHERE id = ?"
         cursor = update.cursor()
-        cursor.execute(sql, [category, image_id])
+        cursor.execute(sql_statement, [category, image_id])
         update.commit()
 
         # Redirect user to categorize more images

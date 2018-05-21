@@ -13,6 +13,7 @@
     <br/>
     <div class="form-group">
     <select autocomplete="off" autofocus class="form-control" name="category" id="category" placeholder="Symbol"/>
+    <option value=0></option>
     {% for Category in category %}
     <option value={{Category.id}}>{{Category.description}}</option>
     {% endfor %}
