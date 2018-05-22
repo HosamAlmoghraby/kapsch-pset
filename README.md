@@ -6,7 +6,7 @@ flask run
 
 ## Kapsch Study Case:
 * User opens the website.
-* User register or login if registered.
+* User register or login if registered "login area will help in the future to know how many images each user categorized"
 * if there is any uncategorized images redirects user to categorize image.
 * First image of several images is shown.
 * User chooses which category the image belongs to (A, B or C) from the dropdown list and clicks on submit.
